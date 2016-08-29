@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+<% include header.ejs %>
+<body>
+    <script>
+        var pageNum = <%- pageNum+1 %>;
+    </script>
+    <% include navigation.ejs %>
+    <h1>Posts</h1>
+    <p>Page: <%- pageNum+1 %></p>
+
+    <ul class="page-list">
+        <!-- Previous button -->
+        <a href="?page=<%- pageNum %>&postCount=<%- postCount %>">Previous</a>
+        <% for(var i=0;i<numPages;i++){ %>
+        <li>
+            <% if(pageNum !== i-1) {%>
+
+            <!-- Page link -->
+            <a href="?page=<%- i %>&postCount=<%- postCount %>"><%- i %></a>
+
+            <% }else{ %>
+            <!-- Current page button -->
+            <p><%- i %></p>
+            <%}%>
+
+        </li>
+        <% } %>
+
+        <!-- Next button -->
+        <a href="?page=<%- pageNum+2 %>&postCount=<%- postCount %>">Next</a>
+    </ul>
+
+    <div class="posts-container">
+        <% for(var i=0;i<posts.length;i++){ %>
+        <div class="post-container">
+            <div class="post-title">
+                <%- posts[i].title %> / <%- posts[i].id %>
+            </div>
+            <br/>
+            <div class="post-content">
+                <%- posts[i].body %>
+            </div>
+            <a href="/article/<%- posts[i].id %>">Read more...</a>
+            <hr/>
+        </div>
+        <% } %>
+    </div>
+
+    <div class="load-indicator">
+        <p>Loading...</p>
+    </div>
+
+    <% include footer.ejs %>
+
+    <script src="/static/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "ejs-sample",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "FranciZ <franci@proxima.si>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

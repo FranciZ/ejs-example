@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<% include header.ejs %>
+<body>
+<% include navigation.ejs %>
+
+<div class="title-container">
+    <h1>About</h1>
+
+    <h2>Franci Zidar</h2>
+</div>
+
+<div class="text-about">
+    <p>
+    <div class="avatar-image">
+    </div>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus fringilla ex quis volutpat. In non magna
+        ut diam faucibus tristique. Praesent pretium nibh in est porttitor tincidunt. Etiam ut dolor suscipit, efficitur
+        nisl quis, ultrices enim.<br/><br/> Praesent efficitur elit erat, et gravida est aliquet vel. Donec vulputate aliquam
+        tortor sit amet rutrum. Sed mollis sem nec euismod porttitor. Curabitur fermentum molestie ligula et venenatis.
+        Phasellus aliquet, augue finibus maximus convallis, elit diam lobortis orci, eu commodo felis purus quis sem.
+        Nunc ut orci nunc. Vivamus dignissim magna eget magna viverra, tempus vehicula metus semper. Donec viverra,
+        massa vel blandit aliquam, urna dolor hendrerit augue, nec placerat nunc elit at ex.<br/><br/> Nullam eleifend, lectus nec
+        lobortis cursus, sapien libero elementum elit, sed semper dolor erat eget elit. Vestibulum ac nibh ac lacus
+        efficitur aliquam quis eu velit. Integer rhoncus gravida vehicula.
+    </p>
+</div>
+
+<div class="cta-container">
+    <div class="cta-button">Hire me!</div>
+    <br/>
+    <div class="form-container">
+        <form>
+            <div class="form-block">
+                <div class="label-container">
+                    <label>Email</label>
+                </div>
+                <input id="email" name="email" class="form-element" type="email" />
+            </div>
+            <div class="form-block">
+                <div class="label-container">
+                    <label>Name</label>
+                </div>
+                <input id="name" name="name" class="form-element" type="text" />
+            </div>
+            <div class="form-block">
+                <div class="label-container">
+                    <label>Company</label>
+                </div>
+                <input id="company" name="company" class="form-element" type="text" />
+            </div>
+            <div class="form-block">
+                <div class="label-container">
+                    <label>Website</label>
+                </div>
+                <input id="website" name="website" class="form-element" type="url" />
+            </div>
+            <div class="form-block">
+                <div class="label-container">
+                    <label>Job description</label>
+                </div>
+                <textarea id="description" name="description" class="form-element"></textarea>
+            </div>
+            <div class="form-block">
+                <label>Budget</label><br/>
+                <div class="label-container"><label>From:</label></div><input id="from" name="from" type="number" class="form-element"><br/><br/>
+                <div class="label-container"><label>To:</label></div><input id="to" name="to" type="number" class="form-element">
+            </div>
+        </form>
+
+        <div type="submit" class="submit-button">Submit</div>
+
+    </div>
+</div>
+
+<% include footer.ejs %>
+
+<script src="/static/js/about.js"></script>
+
+</body>
+</html>
+
